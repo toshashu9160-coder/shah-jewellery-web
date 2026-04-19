@@ -10,6 +10,18 @@
       "use": "@vercel/static"
     },
     {
+      "src": "google70ef0921f4cb4821.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "robots.txt",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "sitemap.xml",
+      "use": "@vercel/static"
+    },
+    {
       "src": "style.css",
       "use": "@vercel/static"
     },
