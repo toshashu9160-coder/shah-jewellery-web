@@ -507,36 +507,90 @@ input, textarea, select { font-family: var(--font-sans); }
 
 /* ---------- 12. CONTACT ---------- */
 .contact-inner {
-  display: flex; flex-direction: column; align-items: center; justify-content: center; max-width: 600px; margin: 0 auto; gap: 3rem; text-align: center;
-}
-.contact-info { display: flex; flex-direction: column; gap: 2rem; align-items: center; }
-.info-block { display: flex; flex-direction: column; align-items: center; gap: 0.8rem; }
-.info-icon { font-size: 1.5rem; margin-top: 0.1rem; flex-shrink: 0; }
-.info-block h4 { font-size: 0.8rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 0.4rem; }
-.info-block p { font-size: 0.88rem; color: var(--text-dim); }
-
-/* Location block: row on desktop, column on mobile */
-.info-block-location {
   display: flex;
-  align-items: center;
-  gap: 1.5rem;
+  flex-direction: column;
+  gap: 3rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-block {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  text-align: left;
+}
+
+.info-icon {
+  font-size: 1.5rem;
+  color: var(--gold);
+  flex-shrink: 0;
+}
+
+.info-block h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.3rem;
+}
+
+.info-block p {
+  font-size: 0.95rem;
+  color: var(--text-dim);
+  line-height: 1.6;
 }
 
 .desktop-map {
-  width: 300px;
-  height: 300px;
+  width: 350px;
+  height: 350px;
   border-radius: var(--radius);
   overflow: hidden;
   border: 1px solid rgba(201,168,76,0.2);
-  box-shadow: var(--shadow);
-  display: block;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+  background: var(--dark-soft);
+  flex-shrink: 0;
 }
 
-/* Hide map on mobile, hide button on desktop */
-@media (max-width: 768px) {
-  .desktop-map { display: none; }
+/* Desktop Split Layout */
+@media (min-width: 992px) {
+  .contact-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+  }
+  .contact-info {
+    flex: 1;
+    max-width: 500px;
+  }
 }
-@media (min-width: 769px) {
+
+/* Mobile Visibility Logic */
+@media (max-width: 991px) {
+  .desktop-map {
+    width: 100%;
+    height: 300px;
+    display: none; /* Hide interactive map on mobile to save space/performance */
+  }
+  .contact-info {
+    align-items: center;
+    text-align: center;
+  }
+  .info-block {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media (min-width: 992px) {
   .map-link { display: none; }
 }
 
