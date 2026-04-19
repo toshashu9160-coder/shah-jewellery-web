@@ -519,7 +519,25 @@ input, textarea, select { font-family: var(--font-sans); }
 .info-block-location {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+
+.desktop-map {
+  width: 300px;
+  height: 300px;
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid rgba(201,168,76,0.2);
+  box-shadow: var(--shadow);
+  display: block;
+}
+
+/* Hide map on mobile, hide button on desktop */
+@media (max-width: 768px) {
+  .desktop-map { display: none; }
+}
+@media (min-width: 769px) {
+  .map-link { display: none; }
 }
 
 .map-link {
