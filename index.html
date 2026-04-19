@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Shah Jewellery – Timeless Elegance, Crafted for You</title>
+  <meta name="title" content="Shah Jewellery – Timeless Elegance, Crafted for You" />
+  <meta name="description"
+    content="Shah Jewellery offers the finest handcrafted gold, diamond, and gemstone jewellery. Explore our exclusive collections of rings, necklaces, earrings and bracelets." />
+  <meta name="keywords" content="Shah Jewellery, gold jewellery, diamond rings, handcrafted necklaces, antique jewellery, Kolkata jewellers, bridal jewellery" />
+  <meta name="author" content="Shah Jewellery" />
+  <link rel="canonical" href="https://shah-jewellery.vercel.app/" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://shah-jewellery.vercel.app/" />
+  <meta property="og:title" content="Shah Jewellery – Timeless Elegance, Crafted for You" />
+  <meta property="og:description" content="Shah Jewellery offers the finest handcrafted gold, diamond, and gemstone jewellery. Explore our exclusive collections." />
+  <meta property="og:image" content="https://shah-jewellery.vercel.app/images/hero_banner.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://shah-jewellery.vercel.app/" />
+  <meta property="twitter:title" content="Shah Jewellery – Timeless Elegance, Crafted for You" />
+  <meta property="twitter:description" content="Shah Jewellery offers the finest handcrafted gold, diamond, and gemstone jewellery. Explore our exclusive collections." />
+  <meta property="twitter:image" content="https://shah-jewellery.vercel.app/images/hero_banner.png" />
+
+  <!-- Favicon & Theme -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✦</text></svg>">
+  <meta name="theme-color" content="#131313" />
+
+  <!-- Fonts & Scripts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Structured Data / JSON-LD -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "JewelryStore",
+      "name": "Shah Jewellery",
+      "url": "https://shah-jewellery.vercel.app/",
+      "logo": "https://shah-jewellery.vercel.app/images/hero_banner.png",
+      "image": "https://shah-jewellery.vercel.app/images/hero_banner.png",
+      "description": "Shah Jewellery offers the finest handcrafted gold, diamond, and gemstone jewellery in Kolkata.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Y2/ 102-C Satghara Lane",
+        "addressLocality": "Kolkata",
+        "postalCode": "700044",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 22.5726,
+        "longitude": 88.3639
+      },
+      "telephone": "8100064711",
+      "openingHours": "Mo,Tu,We,Th,Fr,Sa 10:00-20:00, Su 11:00-18:00",
+      "sameAs": [
+        "https://www.instagram.com/jewellery_shah/",
+        "https://www.facebook.com/profile.php?id=61573345793712"
+      ]
+    }
+  </script>
+</head>
+
+<body>
+
+  <!-- ===== LOADER ===== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">✦</div>
+      <p class="loader-text">SHAH JEWELLERY</p>
+    </div>
+  </div>
+
+  <!-- ===== NAVBAR ===== -->
+  <header id="navbar">
+    <nav class="nav-container">
+      <div class="nav-brand">
+        <span class="brand-icon">✦</span>
+        <span class="brand-name">Shah Jewellery</span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#collections" class="nav-link">Collections</a></li>
+        <li><a href="#about" class="nav-link">About Us</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="cta-btn nav-cta"
+        onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Appointment</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== MOBILE MENU ===== -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu" id="closeMenu">✕</button>
+    <ul>
+      <li><a href="#home" class="mob-link">Home</a></li>
+      <li><a href="#collections" class="mob-link">Collections</a></li>
+      <li><a href="#about" class="mob-link">About Us</a></li>
+      <li><a href="#services" class="mob-link">Services</a></li>
+      <li><a href="#testimonials" class="mob-link">Reviews</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+    <button class="cta-btn mob-cta"
+      onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book Appointment</button>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <img src="images/hero_banner.png" alt="Shah Jewellery Collection" class="hero-image" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-subtitle reveal">Est. 2000 · Crafted with Passion</p>
+      <h1 class="hero-title reveal">Timeless Elegance,<br /><em>Crafted for You</em></h1>
+      <p class="hero-desc reveal">Discover exquisite handcrafted jewellery that tells your unique story — from precious
+        diamonds to lustrous gold.</p>
+      <div class="hero-btns reveal">
+        <button class="cta-btn"
+          onclick="document.getElementById('collections').scrollIntoView({behavior:'smooth'})">Explore
+          Collections</button>
+        <button class="outline-btn" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">Our
+          Story</button>
+      </div>
+      <div class="hero-stats reveal">
+        <div class="stat"><span class="stat-num" data-target="5000">0</span><span>+</span>
+          <p>Happy Clients</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-target="40">0</span><span>+</span>
+          <p>Years of Legacy</p>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num" data-target="1200">0</span><span>+</span>
+          <p>Unique Designs</p>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+    </div>
+  </section>
+
+  <!-- ===== MARQUEE ===== -->
+  <div class="marquee-wrap">
+    <div class="marquee-track">
+      <span>✦ Rings</span><span>✦ Necklaces</span><span>✦ Earrings</span><span>✦ Bracelets</span>
+      <span>✦ Bangles</span><span>✦ Pendants</span><span>✦ Gold</span><span>✦ Diamonds</span>
+      <span>✦ Rings</span><span>✦ Necklaces</span><span>✦ Earrings</span><span>✦ Bracelets</span>
+      <span>✦ Bangles</span><span>✦ Pendants</span><span>✦ Gold</span><span>✦ Diamonds</span>
+    </div>
+  </div>
+
+  <!-- ===== COLLECTIONS ===== -->
+  <section id="collections" class="section collections-section">
+    <div class="section-header">
+      <p class="section-tag">Our Finest</p>
+      <h2 class="section-title">Explore Collections</h2>
+      <p class="section-sub">Each piece is a masterwork, blending tradition and contemporary craftsmanship to create
+        jewellery that endures.</p>
+    </div>
+    <div class="collections-grid" id="collectionsGrid">
+      <!-- Collection cards generated dynamically by script.js -->
+    </div>
+  </section>
+
+  <!-- ===== PRODUCT GALLERY MODAL ===== -->
+  <div class="gallery-modal" id="galleryModal">
+    <div class="gallery-header">
+      <div class="gallery-header-inner">
+        <div>
+          <p class="gallery-tag" id="galleryTag">Collection</p>
+          <h2 class="gallery-title" id="galleryTitle">Category Name</h2>
+        </div>
+        <button class="gallery-close" id="galleryClose" aria-label="Close Gallery">✕</button>
+      </div>
+    </div>
+    <div class="gallery-body">
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Product images loaded dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== IMAGE LIGHTBOX ===== -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <button class="lightbox-nav lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="Product Image" />
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+    <button class="lightbox-nav lightbox-next" id="lightboxNext" aria-label="Next">›</button>
+    <div class="lightbox-counter" id="lightboxCounter">1 / 12</div>
+  </div>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section about-section">
+    <div class="about-inner">
+      <div class="about-image-col reveal-left">
+        <div class="about-img-frame">
+          <img src="images/hero_banner.png" alt="Shah Jewellery Store" />
+          <div class="about-badge">
+            <span class="badge-num">26+</span>
+            <span class="badge-label">Years of Excellence</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-text-col reveal-right">
+        <p class="section-tag">Our Heritage</p>
+        <h2 class="section-title left-align">A Legacy Crafted <em>in Gold</em></h2>
+        <p class="about-lead">At Shah Jewellery, we started our journey in 2000 with a small dream — to create beautiful
+          jewellery that people could truly trust. What began as a humble shop has now grown into 26 years of strong
+          relationships, happy customers, and countless special moments shared with you.</p>
+        <p class="about-body">For us, it has never been just about selling jewellery. It’s about being part of your
+          celebrations — weddings, festivals, gifts, and memories that last a lifetime. Over the years, your trust has
+          been our biggest strength, and it’s what keeps us going every day.</p>
+        <p class="about-body">We offer a wide range of jewellery, from traditional designs that feel like home to modern
+          styles that match today’s vibe. No matter what you’re looking for, we’re here to help you find something that
+          feels just right.</p>
+        <p class="about-body">After 26 years, one thing hasn’t changed — our promise to treat every customer like family
+          and every piece of jewellery with care and honesty.</p>
+        <div class="about-points">
+          <div class="about-point"><span class="point-icon">✦</span>
+            <p>BIS Hallmarked Gold — Guaranteed Purity</p>
+          </div>
+          <div class="about-point"><span class="point-icon">✦</span>
+            <p>IGI Certified Diamonds</p>
+          </div>
+          <div class="about-point"><span class="point-icon">✦</span>
+            <p>Custom & Bespoke Design Services</p>
+          </div>
+          <div class="about-point"><span class="point-icon">✦</span>
+            <p>Lifetime Maintenance & Exchange Policy</p>
+          </div>
+        </div>
+        <button class="cta-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get in
+          Touch</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section contact-section">
+    <div class="section-header">
+      <p class="section-tag">Get in Touch</p>
+      <h2 class="section-title">Visit or Contact Us</h2>
+      <p class="section-sub">We'd love to help you find the perfect piece. Reach out to us or book an appointment.</p>
+    </div>
+    <div class="contact-inner">
+      <div class="contact-info reveal-left">
+        <div class="info-block">
+          <span class="info-icon">📍</span>
+          <div class="info-block-location">
+            <div>
+              <h4>Our Store</h4>
+              <p>Y2/ 102-C Satghara Lane Kolkata- 700044</p>
+            </div>
+            <a href="https://share.google/KkKop8b2WImlN8wCV" target="_blank" rel="noopener noreferrer" class="map-link" aria-label="View on Google Maps">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+              View on Map
+            </a>
+          </div>
+        </div>
+        <div class="info-block">
+          <span class="info-icon">📞</span>
+          <div>
+            <h4>Phone</h4>
+            <p>8100064711</p>
+            <p>
+              <a href="https://wa.me/917439777953?text=Hello%20Shah%20Jewellery!%20I%20would%20like%20to%20enquire%20about%20your%20jewellery%20collection.%20Could%20you%20please%20share%20more%20details%3F"
+                target="_blank" class="whatsapp-link">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="16"
+                  height="16">
+                7439777953
+              </a>
+            </p>
+          </div>
+        </div>
+        <div class="info-block">
+          <span class="info-icon">✉️</span>
+          <div>
+            <h4>Email</h4>
+            <p>shah.jewelleryy@gmail.com</p>
+          </div>
+        </div>
+        <div class="info-block">
+          <span class="info-icon">🕙</span>
+          <div>
+            <h4>Store Hours</h4>
+            <p>Mon – Sat: 10:00 AM – 8:00 PM</p>
+            <p>Sunday: 11:00 AM – 6:00 PM</p>
+          </div>
+        </div>
+        <div class="social-links">
+          <a href="https://www.instagram.com/jewellery_shah/" class="social-link" aria-label="Instagram" target="_blank"
+            rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+            </svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61573345793712&sk=about" class="social-link"
+            aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+          </a>
+          <a href="https://wa.me/917439777953?text=Hello%20Shah%20Jewellery!%20I%20would%20like%20to%20enquire%20about%20your%20jewellery%20collection.%20Could%20you%20please%20share%20more%20details%3F"
+            class="social-link" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== SERVICES ===== -->
+  <section id="services" class="section services-section">
+    <div class="section-header">
+      <p class="section-tag">What We Offer</p>
+      <h2 class="section-title">Our Premium Services</h2>
+      <p class="section-sub">Beyond beautiful jewellery, we offer a complete experience tailored to your needs.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal-card">
+        <div class="service-icon">💍</div>
+        <h3>Custom Design</h3>
+        <p>Work with our master artisans to bring your dream jewellery to life with bespoke design consultations.</p>
+      </div>
+      <div class="service-card reveal-card">
+        <div class="service-icon">🔬</div>
+        <h3>Diamond Certification</h3>
+        <p>Every diamond we sell is IGI/GIA certified — we provide full transparency on cut, clarity, colour, and carat.
+        </p>
+      </div>
+      <div class="service-card reveal-card">
+        <div class="service-icon">🔄</div>
+        <h3>Exchange & Buyback</h3>
+        <p>Upgrade your old jewellery through our hassle-free exchange and attractive buyback programmes.</p>
+      </div>
+      <div class="service-card reveal-card">
+        <div class="service-icon">🛡️</div>
+        <h3>Lifetime Maintenance</h3>
+        <p>Free cleaning, polishing, and maintenance for all jewellery purchased from Shah Jewellery, for life.</p>
+      </div>
+      <div class="service-card reveal-card">
+        <div class="service-icon">📦</div>
+        <h3>Luxury Packaging</h3>
+        <p>Every piece arrives in our signature luxury gift box — perfect for gifting on any occasion.</p>
+      </div>
+      <div class="service-card reveal-card">
+        <div class="service-icon">🏠</div>
+        <h3>Home Visits</h3>
+        <p>Can't visit us? Our jewellery consultants come to you for a private, personalised shopping experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BANNER CTA ===== -->
+  <section class="banner-cta">
+    <div class="banner-cta-content">
+      <p class="section-tag light">Special Offer</p>
+      <h2>Bridal Jewellery Collection 2025</h2>
+      <p>Explore our exclusive bridal sets and receive a complimentary jewellery styling consultation. Book your
+        appointment today.</p>
+      <button class="cta-btn light-cta"
+        onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Book a Free
+        Consultation</button>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS ===== -->
+  <section id="testimonials" class="section testimonials-section">
+    <div class="section-header">
+      <p class="section-tag">Client Stories</p>
+      <h2 class="section-title">What Our Clients Say</h2>
+    </div>
+    <div class="testimonials-track-wrap">
+      <div class="testimonials-track" id="testimonialsTrack">
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"I got my engagement ring from Shah Jewellery and it was absolutely breathtaking. The craftsmanship and the
+            personal attention we received was unmatched. Highly recommended!"</p>
+          <div class="client-info">
+            <div class="client-avatar">P</div>
+            <div><strong>Priya Sharma</strong><span>Mumbai</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Shah Jewellery has been our family's first choice for over two decades. The quality and trust they offer
+            is truly unmatched. Every piece is a work of art."</p>
+          <div class="client-info">
+            <div class="client-avatar">R</div>
+            <div><strong>Rajan Mehta</strong><span>Surat</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"I had a custom necklace designed for my mother's anniversary. The team was so patient and creative. The
+            final piece exceeded all expectations!"</p>
+          <div class="client-info">
+            <div class="client-avatar">A</div>
+            <div><strong>Anjali Patel</strong><span>Ahmedabad</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"The bridal jewellery I purchased from Shah Jewellery was the highlight of my wedding. Every guest
+            complimented me and the quality is simply outstanding."</p>
+          <div class="client-info">
+            <div class="client-avatar">N</div>
+            <div><strong>Neha Kapoor</strong><span>Delhi</span></div>
+          </div>
+        </div>
+
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <p>"Excellent service, certified diamonds, and gorgeous designs. Shah Jewellery truly lives up to its
+            reputation. My go-to jeweller for life!"</p>
+          <div class="client-info">
+            <div class="client-avatar">K</div>
+            <div><strong>Kavita Desai</strong><span>Pune</span></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="testimonial-controls">
+        <button class="t-btn" id="tPrev">←</button>
+        <div class="t-dots" id="tDots"></div>
+        <button class="t-btn" id="tNext">→</button>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="nav-brand">
+          <span class="brand-icon">✦</span>
+          <span class="brand-name">Shah Jewellery</span>
+        </div>
+        <p>Crafting timeless treasures since 2000. Your trusted jeweller for gold, diamonds, and beyond.</p>
+      </div>
+      <div class="footer-links-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#collections">Collections</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h4>Collections</h4>
+        <ul>
+          <li><a href="#collections">Rings</a></li>
+          <li><a href="#collections">Necklaces</a></li>
+          <li><a href="#collections">Earrings</a></li>
+          <li><a href="#collections">Bracelets</a></li>
+        </ul>
+      </div>
+      <div class="footer-links-col">
+        <h4>Contact</h4>
+        <ul>
+          <li>8100064711</li>
+          <li>shah.jewelleryy@gmail.com</li>
+          <li>Kolkata, India</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Shah Jewellery. All rights reserved. | Crafted by Ashutosh Shah in India</p>
+    </div>
+  </footer>
+
+  <!-- ===== BACK TO TOP ===== -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- ===== FLOATING WHATSAPP ===== -->
+  <a href="https://wa.me/917439777953?text=Hello%20Shah%20Jewellery!%20I%20would%20like%20to%20enquire%20about%20your%20jewellery%20collection.%20Could%20you%20please%20share%20more%20details%3F"
+    class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
